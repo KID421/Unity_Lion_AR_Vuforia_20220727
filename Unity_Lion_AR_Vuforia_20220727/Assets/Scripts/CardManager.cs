@@ -19,6 +19,8 @@ namespace KID.AR.Vuforia
         private VirtualButtonBehaviour vbbJump;
 
         private string parVictory = "Ä²µo³Ó§Q";
+        private string parJump = "Ä²µo¸õÅD";
+        private string parAttack = "Ä²µo§ðÀ»";
         private AudioSource audBGM;
 
         private void Awake()
@@ -38,6 +40,7 @@ namespace KID.AR.Vuforia
         private void OnJumpPressed(VirtualButtonBehaviour obj)
         {
             print("<color=#3366dd>¸õÅD!!!</color>");
+            aniKnight.SetTrigger(parJump);
         }
 
         /// <summary>
@@ -65,6 +68,7 @@ namespace KID.AR.Vuforia
         private void Attack()
         {
             print("<color=#9955aa>§ðÀ»!!!</color>");
+            aniKnight.SetTrigger(parAttack);
         }
     }
 }

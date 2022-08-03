@@ -5736,8 +5736,12 @@ struct CardManager_t7BDCD448C1E035B55A5EA9BA66B7BA338262A32A  : public MonoBehav
 	VirtualButtonBehaviour_tCE0715599AD5D666FCA4A62B0F6FC27267C99491* ___vbbJump_7;
 	// System.String KID.AR.Vuforia.CardManager::parVictory
 	String_t* ___parVictory_8;
+	// System.String KID.AR.Vuforia.CardManager::parJump
+	String_t* ___parJump_9;
+	// System.String KID.AR.Vuforia.CardManager::parAttack
+	String_t* ___parAttack_10;
 	// UnityEngine.AudioSource KID.AR.Vuforia.CardManager::audBGM
-	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___audBGM_9;
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___audBGM_11;
 };
 
 // DefaultObserverEventHandler
@@ -6744,9 +6748,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6476[4] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6477[1] = 
 {
 	static_cast<int32_t>(offsetof(EnumMemberAttribute_t65B5E85E642C96791DD6AE5EAD0276350954126F, ___value_0)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6480[6] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6480[8] = 
 {
-	static_cast<int32_t>(offsetof(CardManager_t7BDCD448C1E035B55A5EA9BA66B7BA338262A32A, ___observerKID_4)),static_cast<int32_t>(offsetof(CardManager_t7BDCD448C1E035B55A5EA9BA66B7BA338262A32A, ___aniKnight_5)),static_cast<int32_t>(offsetof(CardManager_t7BDCD448C1E035B55A5EA9BA66B7BA338262A32A, ___btnAttack_6)),static_cast<int32_t>(offsetof(CardManager_t7BDCD448C1E035B55A5EA9BA66B7BA338262A32A, ___vbbJump_7)),static_cast<int32_t>(offsetof(CardManager_t7BDCD448C1E035B55A5EA9BA66B7BA338262A32A, ___parVictory_8)),static_cast<int32_t>(offsetof(CardManager_t7BDCD448C1E035B55A5EA9BA66B7BA338262A32A, ___audBGM_9)),};
+	static_cast<int32_t>(offsetof(CardManager_t7BDCD448C1E035B55A5EA9BA66B7BA338262A32A, ___observerKID_4)),static_cast<int32_t>(offsetof(CardManager_t7BDCD448C1E035B55A5EA9BA66B7BA338262A32A, ___aniKnight_5)),static_cast<int32_t>(offsetof(CardManager_t7BDCD448C1E035B55A5EA9BA66B7BA338262A32A, ___btnAttack_6)),static_cast<int32_t>(offsetof(CardManager_t7BDCD448C1E035B55A5EA9BA66B7BA338262A32A, ___vbbJump_7)),static_cast<int32_t>(offsetof(CardManager_t7BDCD448C1E035B55A5EA9BA66B7BA338262A32A, ___parVictory_8)),static_cast<int32_t>(offsetof(CardManager_t7BDCD448C1E035B55A5EA9BA66B7BA338262A32A, ___parJump_9)),static_cast<int32_t>(offsetof(CardManager_t7BDCD448C1E035B55A5EA9BA66B7BA338262A32A, ___parAttack_10)),static_cast<int32_t>(offsetof(CardManager_t7BDCD448C1E035B55A5EA9BA66B7BA338262A32A, ___audBGM_11)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6484[4] = 
 {
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,};

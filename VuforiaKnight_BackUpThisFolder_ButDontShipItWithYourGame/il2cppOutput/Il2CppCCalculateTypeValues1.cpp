@@ -13579,8 +13579,12 @@ struct CardManager_t7BDCD448C1E035B55A5EA9BA66B7BA338262A32A  : public MonoBehav
 	VirtualButtonBehaviour_tCE0715599AD5D666FCA4A62B0F6FC27267C99491* ___vbbJump_7;
 	// System.String KID.AR.Vuforia.CardManager::parVictory
 	String_t* ___parVictory_8;
+	// System.String KID.AR.Vuforia.CardManager::parJump
+	String_t* ___parJump_9;
+	// System.String KID.AR.Vuforia.CardManager::parAttack
+	String_t* ___parAttack_10;
 	// UnityEngine.AudioSource KID.AR.Vuforia.CardManager::audBGM
-	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___audBGM_9;
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___audBGM_11;
 };
 
 // DefaultObserverEventHandler

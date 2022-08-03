@@ -88,9 +88,11 @@ IL2CPP_EXTERN_C RuntimeClass* UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A96
 IL2CPP_EXTERN_C String_t* _stringLiteral18CA3B38C741902F3A08188F5919AFBF38EA17FA;
 IL2CPP_EXTERN_C String_t* _stringLiteral3A0BC1A635858FF609E7A30D6D4AA302F0F01EBF;
 IL2CPP_EXTERN_C String_t* _stringLiteral54F55E8E80D27ADE8398C123740CF5186D47ABD5;
+IL2CPP_EXTERN_C String_t* _stringLiteral634B56476646A1BCA5249BF0E4219645BDF45297;
 IL2CPP_EXTERN_C String_t* _stringLiteralB2D62E3F75706996C1B47FC533FBBFDE9C3C5173;
 IL2CPP_EXTERN_C String_t* _stringLiteralC0FB5A57ACBDF7109FD4B2DCABEC311C574C2D15;
 IL2CPP_EXTERN_C String_t* _stringLiteralC302A5D0BA7CB4DA2991F146C01CDE711B7CD1C4;
+IL2CPP_EXTERN_C String_t* _stringLiteralF88DBAA8615EF4FD72931784B3E926D6C137254F;
 IL2CPP_EXTERN_C const RuntimeMethod* CardManager_Attack_m15FDB6DB32394CDFAE32232F1D4EF4D1553CFC46_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* CardManager_CardFound_mAC24D55C22BBCAB1E1F71E2BF0FAE53939447031_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* CardManager_CardLost_mC610EF3FC5C432DA08E170AB7D624512790A3243_RuntimeMethod_var;
@@ -550,8 +552,12 @@ struct CardManager_t7BDCD448C1E035B55A5EA9BA66B7BA338262A32A  : public MonoBehav
 	VirtualButtonBehaviour_tCE0715599AD5D666FCA4A62B0F6FC27267C99491* ___vbbJump_7;
 	// System.String KID.AR.Vuforia.CardManager::parVictory
 	String_t* ___parVictory_8;
+	// System.String KID.AR.Vuforia.CardManager::parJump
+	String_t* ___parJump_9;
+	// System.String KID.AR.Vuforia.CardManager::parAttack
+	String_t* ___parAttack_10;
 	// UnityEngine.AudioSource KID.AR.Vuforia.CardManager::audBGM
-	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___audBGM_9;
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___audBGM_11;
 };
 
 // DefaultObserverEventHandler
@@ -793,8 +799,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CardManager_Awake_m409B64827DC449AAE76B1
 		NullCheck(L_11);
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_12;
 		L_12 = GameObject_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m4F30DAB8E5B57E8DB6BD8C0C3BB11CCB57690C4A(L_11, GameObject_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m4F30DAB8E5B57E8DB6BD8C0C3BB11CCB57690C4A_RuntimeMethod_var);
-		__this->___audBGM_9 = L_12;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___audBGM_9), (void*)L_12);
+		__this->___audBGM_11 = L_12;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___audBGM_11), (void*)L_12);
 		// }
 		return;
 	}
@@ -811,6 +817,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CardManager_OnJumpPressed_m2C3C1F60B3B4D
 	{
 		// print("<color=#3366dd>???D!!!</color>");
 		MonoBehaviour_print_mED815C779E369787B3E9646A6DE96FBC2944BF0B(_stringLiteralC0FB5A57ACBDF7109FD4B2DCABEC311C574C2D15, NULL);
+		// aniKnight.SetTrigger(parJump);
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_0 = __this->___aniKnight_5;
+		String_t* L_1 = __this->___parJump_9;
+		NullCheck(L_0);
+		Animator_SetTrigger_mC9CD54D627C8843EF6E159E167449D216EF6EB30(L_0, L_1, NULL);
 		// }
 		return;
 	}
@@ -833,7 +844,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CardManager_CardFound_mAC24D55C22BBCAB1E
 		NullCheck(L_0);
 		Animator_SetTrigger_mC9CD54D627C8843EF6E159E167449D216EF6EB30(L_0, L_1, NULL);
 		// audBGM.Play();
-		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_2 = __this->___audBGM_9;
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_2 = __this->___audBGM_11;
 		NullCheck(L_2);
 		AudioSource_Play_m95DF07111C61D0E0F00257A00384D31531D590C3(L_2, NULL);
 		// }
@@ -853,7 +864,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CardManager_CardLost_mC610EF3FC5C432DA08
 		// print("<color=red>?d?????????</color>");
 		MonoBehaviour_print_mED815C779E369787B3E9646A6DE96FBC2944BF0B(_stringLiteral18CA3B38C741902F3A08188F5919AFBF38EA17FA, NULL);
 		// audBGM.Stop();
-		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_0 = __this->___audBGM_9;
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_0 = __this->___audBGM_11;
 		NullCheck(L_0);
 		AudioSource_Stop_m318F17F17A147C77FF6E0A5A7A6BE057DB90F537(L_0, NULL);
 		// }
@@ -872,6 +883,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CardManager_Attack_m15FDB6DB32394CDFAE32
 	{
 		// print("<color=#9955aa>????!!!</color>");
 		MonoBehaviour_print_mED815C779E369787B3E9646A6DE96FBC2944BF0B(_stringLiteral3A0BC1A635858FF609E7A30D6D4AA302F0F01EBF, NULL);
+		// aniKnight.SetTrigger(parAttack);
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_0 = __this->___aniKnight_5;
+		String_t* L_1 = __this->___parAttack_10;
+		NullCheck(L_0);
+		Animator_SetTrigger_mC9CD54D627C8843EF6E159E167449D216EF6EB30(L_0, L_1, NULL);
 		// }
 		return;
 	}
@@ -883,12 +899,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CardManager__ctor_mE19AC721FB44F9E554BF9
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral54F55E8E80D27ADE8398C123740CF5186D47ABD5);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral634B56476646A1BCA5249BF0E4219645BDF45297);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF88DBAA8615EF4FD72931784B3E926D6C137254F);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
 		// private string parVictory = "??o??Q";
 		__this->___parVictory_8 = _stringLiteral54F55E8E80D27ADE8398C123740CF5186D47ABD5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___parVictory_8), (void*)_stringLiteral54F55E8E80D27ADE8398C123740CF5186D47ABD5);
+		// private string parJump = "??o???D";
+		__this->___parJump_9 = _stringLiteralF88DBAA8615EF4FD72931784B3E926D6C137254F;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___parJump_9), (void*)_stringLiteralF88DBAA8615EF4FD72931784B3E926D6C137254F);
+		// private string parAttack = "??o????";
+		__this->___parAttack_10 = _stringLiteral634B56476646A1BCA5249BF0E4219645BDF45297;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___parAttack_10), (void*)_stringLiteral634B56476646A1BCA5249BF0E4219645BDF45297);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
